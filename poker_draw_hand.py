@@ -1,4 +1,4 @@
-from poker_hand_checker import get_hand, get_deck
+from poker_get_deck_and_hand import get_hand, get_deck
 
 
 def pick_and_draw():
