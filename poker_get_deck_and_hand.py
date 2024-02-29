@@ -15,8 +15,7 @@ def get_deck():
     return deck
 
 
-def get_hand():
-    deck = get_deck()
+def get_hand(deck):
     hand = []
     for card in range(5):
         hand_card = random.choice(deck)
