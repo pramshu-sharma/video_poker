@@ -4,7 +4,7 @@ from poker_hand_checker import check_drawn_hand
 import random
 
 
-def pick_and_draw():  # need to fix test case: (2,3,4)
+def pick_and_draw():  # need to test
     deck = get_deck()
     hand = get_hand(deck)
     random.shuffle(hand)
@@ -27,11 +27,12 @@ def pick_and_draw():  # need to fix test case: (2,3,4)
             for index, card in enumerate(list_cards_to_keep, start=1):
                 hand.remove(hand[card - index])
 
-            for card in range(len(cards_to_keep)):
+            for card in range(len(list_cards_to_keep)):
                 hand.append(random.choice(deck))
 
             print(hand)
             check_drawn_hand(hand)
+
 
 def validation_input_to_keep(cards_to_keep: str):  # need to test
     valid_values = ['1', '2', '3', '4', '5']
