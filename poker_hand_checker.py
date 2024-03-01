@@ -84,3 +84,25 @@ def check_straight(hand):
             return False
 
     return True
+
+
+def check_drawn_hand(hand):
+    hand_types = {
+        'High Card': check_high_card(hand),
+        'Pair': check_pair(hand),
+        'Two Pair': check_two_pair(hand),
+        'Three Of A Kind': check_three_of_a_kind(hand),
+        'Straight': check_straight(hand),
+        'Flush': check_flush(hand),
+        'Full House': check_full_house(hand),
+        'Four Of A Kind': check_four_of_a_kind(hand),
+        'Straight Flush': check_straight_flush(hand),
+        'Royal Flush': check_royal_flush(hand)
+    }
+
+    for key, value in hand_types.items():
+        if value:
+            print(key)
+            break
+
+
