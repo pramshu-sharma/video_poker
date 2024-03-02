@@ -102,7 +102,7 @@ def check_drawn_hand(hand):
 
     for key, value in hand_types.items():
         if value:
-            print(key)
-            break
+            return key
+
 
 
