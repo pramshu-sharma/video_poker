@@ -50,3 +50,4 @@ def get_rank_and_suite_values(hand, get_suite: bool = None, get_rank: bool = Non
         return ranks
     elif get_suite and get_rank:
         return suites, ranks
+

@@ -71,8 +71,9 @@ def game_loop(chips):
 
 
 if __name__ == '__main__':
-    try:
-        game_chips = int(input('Enter chips to play with: '))
-        game_loop(game_chips)
-    except ValueError:
-        print('Enter a valid value.')
+    while True:
+        try:
+            game_chips = int(input('Enter chips to play with: '))
+            game_loop(game_chips)
+        except ValueError:
+            print('Enter a valid value.')

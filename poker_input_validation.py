@@ -16,7 +16,7 @@ def validation_input_to_keep(cards_to_keep: str):  # need to test
                 if value.strip() not in valid_values:
                     raise ValueError
             return cards_to_keep
-    except ValueError:
+    except TypeError:
         print('Please enter a valid value i.e. "1 - 5" separated by commas, "draw" OR "keep".')
 
 
